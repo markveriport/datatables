@@ -47,19 +47,18 @@ export default class Context<Row>
     {
         const pageNumber    = get(this.pageNumber)
         const rowsPerPage   = get(this.rowsPerPage)
-        const pageCount     = get(this.pageCount)
         const sort          = get(this.sort)
         const filters       = get(this.filters)
         return {
             pageNumber,
             rowsPerPage,
-            pageCount,
             offset: rowsPerPage * (pageNumber - 1),
             search: get(this.search),
             sorted: sort ?? undefined as any, // deprecated
             sort: sort ?? undefined as any,
             filters: filters.length > 0 ? filters : undefined as any,
-            setTotalRows: (value: number) => this.totalRows.set(value)
+            setTotalRows: (value: number) => this.totalRows.set(value),
+            setPageCount: (value: number) => this.pageCount.set(value)
         }
     }
 

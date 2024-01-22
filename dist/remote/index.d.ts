@@ -33,7 +33,6 @@ export type Sort<Row> = {
 export type State = {
     pageNumber: number;
     rowsPerPage: number;
-    pageCount: number;
     offset: number;
     search: string | undefined;
     sort: Sort<Row> | undefined;
@@ -43,6 +42,7 @@ export type State = {
      * @deprecated use 'sort' instead
      */
     sorted: Sort<Row> | undefined;
+    setPageCount: (value: number) => void;
 };
 /**
  * @deprecated use (Row[keyof Row] | Row) instead
