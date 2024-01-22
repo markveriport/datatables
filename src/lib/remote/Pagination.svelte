@@ -124,7 +124,7 @@
 
     button:first-child:not(.small),
     button:last-child:not(.small) {
-        min-width: 72px;
+        min-width: 8em;
     }
 
     button:not(.active):hover {
@@ -135,7 +135,7 @@
         cursor: default;
     }
     button.page {
-        width: 72px;
+        width: 8em;
         background: #fafafa;
     }
     button.page:hover {
