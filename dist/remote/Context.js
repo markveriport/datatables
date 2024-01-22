@@ -38,11 +38,13 @@ export default class Context {
     getState() {
         const pageNumber = get(this.pageNumber);
         const rowsPerPage = get(this.rowsPerPage);
+        const pageCount = get(this.pageCount);
         const sort = get(this.sort);
         const filters = get(this.filters);
         return {
             pageNumber,
             rowsPerPage,
+            pageCount,
             offset: rowsPerPage * (pageNumber - 1),
             search: get(this.search),
             sorted: sort ?? undefined,
