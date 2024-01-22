@@ -3,6 +3,7 @@ export let small = false;
 const pageNumber = handler.getPageNumber();
 const pageCount = handler.getPageCount();
 pageCount.subscribe((next) => { console.log("Pagination.svelte: ", next); });
+console.log("Pagination.svelte $: ", $pageCount);
 const pages = handler.getPages({ ellipsis: true });
 const setPage = (value) => {
     handler.setPage(value);
@@ -19,7 +20,7 @@ const setPage = (value) => {
         >
             &#10094;
         </button>
-        <button class="page">page <b>{$pageNumber}</b></button>
+        <button class="page">page <b>{$pageNumber} of {$pageCount}</b></button>
         <button
             type="button" class="small"
             on:click={() => setPage('next')}
