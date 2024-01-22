@@ -164,6 +164,7 @@ export default class DataHandler<T extends Row = any>
 
     public setPageCount(value: number): void
     {
+        console.log('log from module');
         this.context.setPageCount(value);
     }
 

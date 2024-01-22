@@ -102,6 +102,7 @@ export default class DataHandler {
         return this.context.pageCount;
     }
     setPageCount(value) {
+        console.log('log from module');
         this.context.setPageCount(value);
     }
     getPageNumber() {

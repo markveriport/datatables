@@ -31,7 +31,7 @@ export default class Context<Row> {
     private createPages;
     private createPagesWithEllipsis;
     private createPageCount;
-    private setPageCount;
+    setPageCount(value: number): void;
     private createRowCount;
     private createIsAllSelected;
     private createSelectedCount;

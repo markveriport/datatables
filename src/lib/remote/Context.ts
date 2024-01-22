@@ -119,7 +119,7 @@ export default class Context<Row>
         })
     }
 
-    private setPageCount(value: number) 
+    public setPageCount(value: number) 
     {
         this.pageCount.set(value)
     }
