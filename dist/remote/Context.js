@@ -28,7 +28,7 @@ export default class Context {
         this.rowCount = this.createRowCount();
         this.pages = this.createPages();
         this.pagesWithEllipsis = this.createPagesWithEllipsis();
-        this.pageCount = writable(10);
+        this.pageCount = writable(8);
         this.sort = writable(undefined);
         this.selected = writable([]);
         this.isAllSelected = this.createIsAllSelected();
