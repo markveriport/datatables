@@ -29,7 +29,7 @@
         </button>
         <button class="page">page <b>{$pageNumber} of {$pageCount}</b></button>
         <button
-            type="button" class="small"
+            type="button" class="small" class:disabled={$pageNumber === $pageCount} 
             on:click={() => setPage('next')}
         >
             &#10095;
