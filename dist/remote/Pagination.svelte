@@ -16,13 +16,14 @@ const setPage = (value) => {
         <button
             type="button" class="small"
             class:disabled={$pageNumber === 1}
+            disabled={$pageNumber === $pageCount}
             on:click={() => setPage('previous')}
         >
             &#10094;
         </button>
         <button class="page">page <b>{$pageNumber} of {$pageCount}</b></button>
         <button
-            type="button" class="small" class:disabled={$pageNumber === $pageCount} 
+            type="button" class="small" class:disabled={$pageNumber === $pageCount} disabled={$pageNumber === $pageCount}
             on:click={() => setPage('next')}
         >
             &#10095;
