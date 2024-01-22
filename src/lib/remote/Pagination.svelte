@@ -23,7 +23,7 @@
         <button
             type="button" class="small"
             class:disabled={$pageNumber === 1}
-            disabled={$pageNumber === $pageCount}
+            disabled={$pageNumber === 1}
             on:click={() => setPage('previous')}
         >
             &#10094;
