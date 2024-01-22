@@ -107,6 +107,7 @@ export default class Context {
     }
     setPageCount(value) {
         this.pageCount.set(value);
+        console.log("context setPageCount:", this.pageCount);
     }
     createRowCount() {
         return derived([this.totalRows, this.pageNumber, this.rowsPerPage], ([$totalRows, $pageNumber, $rowsPerPage]) => {

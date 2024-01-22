@@ -2,6 +2,7 @@
 export let small = false;
 const pageNumber = handler.getPageNumber();
 const pageCount = handler.getPageCount();
+console.log("Pagination.svelte: ", pageCount);
 const pages = handler.getPages({ ellipsis: true });
 const setPage = (value) => {
     handler.setPage(value);

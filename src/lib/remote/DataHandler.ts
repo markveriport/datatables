@@ -159,12 +159,13 @@ export default class DataHandler<T extends Row = any>
 
     public getPageCount(): Readable<number>
     {
+        console.log('datahandler getPageCount: ', this.context.pageCount);
         return this.context.pageCount
     }
 
     public setPageCount(value: number): void
     {
-        console.log('log from module');
+        console.log('datahandler setPageCount: ', value);
         this.context.setPageCount(value);
     }
 

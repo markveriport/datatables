@@ -122,6 +122,7 @@ export default class Context<Row>
     public setPageCount(value: number) 
     {
         this.pageCount.set(value)
+        console.log("context setPageCount:", this.pageCount)
     }
 
     private createRowCount()
