@@ -8,7 +8,7 @@
 
     const pageNumber = handler.getPageNumber()
     const pageCount = handler.getPageCount()
-    pageCount.subscribe((next) => {console.log(next)})
+    pageCount.subscribe((next) => {console.log("Pagination.svelte: ", next)})
     const pages = handler.getPages({ ellipsis: true })
 
     const setPage = (value: 'previous' | 'next' | number) => {

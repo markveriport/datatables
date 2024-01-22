@@ -159,7 +159,7 @@ export default class DataHandler<T extends Row = any>
 
     public getPageCount(): Readable<number>
     {
-        console.log('datahandler getPageCount: ', this.context.pageCount);
+        this.context.pageCount.subscribe(next => console.log('datahandler getPageCount: ', next));
         return this.context.pageCount
     }
 

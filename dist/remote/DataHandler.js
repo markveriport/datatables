@@ -99,7 +99,7 @@ export default class DataHandler {
         return this.context.pages;
     }
     getPageCount() {
-        console.log('datahandler getPageCount: ', this.context.pageCount);
+        this.context.pageCount.subscribe(next => console.log('datahandler getPageCount: ', next));
         return this.context.pageCount;
     }
     setPageCount(value) {
