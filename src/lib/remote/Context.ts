@@ -15,7 +15,7 @@ export default class Context<Row>
     public rowCount             : Readable<{ total: number, start: number, end: number }>
     public pages                : Readable<number[]>
     public pagesWithEllipsis    : Readable<number[]>
-    public pageCount            : Readable<number>
+    public pageCount            : Writable<number>
     public sort                 : Writable<Sort<Row>>
     public selected             : Writable<(Row | Row[keyof Row])[]>
     public isAllSelected        : Readable<boolean>
@@ -35,7 +35,7 @@ export default class Context<Row>
         this.rowCount           = this.createRowCount()
         this.pages              = this.createPages()
         this.pagesWithEllipsis  = this.createPagesWithEllipsis()
-        this.pageCount          = this.createPageCount()
+        this.pageCount          = writable(undefined)
         this.sort               = writable(undefined)
         this.selected           = writable([])
         this.isAllSelected      = this.createIsAllSelected()
@@ -117,6 +117,11 @@ export default class Context<Row>
             if (!$pages) return undefined
             return $pages.length
         })
+    }
+
+    private setPageCount(value: number) 
+    {
+        this.pageCount.set(value)
     }
 
     private createRowCount()

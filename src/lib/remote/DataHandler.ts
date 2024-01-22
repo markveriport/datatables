@@ -162,6 +162,11 @@ export default class DataHandler<T extends Row = any>
         return this.context.pageCount
     }
 
+    public setPageCount(value: number): void
+    {
+        this.context.setPageCount(value);
+    }
+
     public getPageNumber(): Writable<number>
     {
         return this.context.pageNumber
