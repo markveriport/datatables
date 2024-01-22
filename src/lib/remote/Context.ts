@@ -35,7 +35,7 @@ export default class Context<Row>
         this.rowCount           = this.createRowCount()
         this.pages              = this.createPages()
         this.pagesWithEllipsis  = this.createPagesWithEllipsis()
-        this.pageCount          = writable(undefined)
+        this.pageCount          = writable(10)
         this.sort               = writable(undefined)
         this.selected           = writable([])
         this.isAllSelected      = this.createIsAllSelected()
